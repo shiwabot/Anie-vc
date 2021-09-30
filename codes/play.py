@@ -124,7 +124,7 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🛑ꜰʟᴏᴏᴅ ᴡᴀɪᴛ ᴇʀʀᴏʀ @Zaid2_ASSISTANT ɪꜱ ɴᴏᴛ ɪɴ ᴜʀ ᴄʜᴀᴛ ᴍɪɴᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴍᴀɴᴜᴀʟʟʏ!")
+                        f"<b>🛑ꜰʟᴏᴏᴅ ᴡᴀɪᴛ ᴇʀʀᴏʀ @Anievc ɪꜱ ɴᴏᴛ ɪɴ ᴜʀ ᴄʜᴀᴛ ᴍɪɴᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴍᴀɴᴜᴀʟʟʏ!")
     try:
         await USER.get_chat(chid)
     except:
@@ -153,7 +153,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="ᴜᴘᴅᴀᴛᴇꜱ",
-                        url="https://t.me/SUPERIOR_BOTS")
+                        url="https://t.me/Aniebotsupports")
                    
                 ]
             ]
@@ -191,10 +191,10 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="☑️ ꜱᴜᴘᴘᴏʀᴛ",
-                            url=f"https://t.me/SUPERIOR_SUPPORT"),
+                            url=f"https://t.me/Aniebotsupports"),
                         InlineKeyboardButton(
                             text="ᴜᴘᴅᴀᴛᴇꜱ 📢",
-                            url=f"https://t.me/SUPERIOR_BOTS")
+                            url=f"https://t.me/Aniebots")
 
                     ]
                 ]
@@ -209,7 +209,7 @@ async def play(_, message: Message):
                         [
                             InlineKeyboardButton(
                                 text="📢 ᴜᴘᴅᴀᴛᴇꜱ",
-                                url=f"https://t.me/SUPERIOR_BOTS")
+                                url=f"https://t.me/Aniebotsupports")
 
                         ]
                     ]
@@ -259,10 +259,10 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text=" ☑️ ꜱᴜᴘᴘᴏʀᴛ",
-                            url=f"https://t.me/SUPERIOR_SUPPORT"),
+                            url=f"https://t.me/Aniebotsupports"),
                         InlineKeyboardButton(
                             text="📢 ᴜᴘᴅᴀᴛᴇꜱ",
-                            url=f"https://t.me/SUPERIOR_BOTS")
+                            url=f"https://t.me/Aniebots")
 
                     ]
                 ]
