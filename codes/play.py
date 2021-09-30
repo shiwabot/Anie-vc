@@ -92,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 ** काम चल रहा है...**")
+    lel = await message.reply("🔄 ** ᴘʀᴏᴄᴇꜱꜱɪɴɢ...**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -112,19 +112,19 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b> मुझे एडमिन बनाने का कष्ट करे!</b>")
+                        "<b> ᴀᴅᴅ ᴍᴇ ᴀᴅᴍɪɴꜱ ꜰɪʀꜱᴛ!</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** म्यूजिक  शयोगी (एसिस्टेंस) ने ये ग्रुप जोड़ लिया है🎵**")
+                        message.chat.id, "** ɪ ᴍ ᴊᴏɪɴ ᴛᴏ ᴘʟᴀʏ ꜱᴏɴɢꜱ ɪɴ ᴠᴄ ᴄʜᴀᴛꜱ🎵**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🛑 कुछ गलत हुआ 🛑</b> \n\सुनो {user.first_name}, सहयोगी (एसिस्टेंस ) यह ग्रुप नही जोड़ सकता । इस बात का ख्याल रखे की सहयोगी (एसिटेंस) ग्रुप से निकाला नही गया हो!")
+                        f"<b>🛑ꜰʟᴏᴏᴅ ᴡᴀɪᴛ ᴇʀʀᴏʀ ᴀꜱꜱɪꜱᴛᴀɴᴛ ɪꜱ ɴᴏᴛ ɪɴ ᴜʀ ᴄʜᴀᴛ ᴍɪɴᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴍᴀɴᴜᴀʟʟʏ!")
     try:
         await USER.get_chat(chid)
     except:
@@ -138,7 +138,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ अपने {DURATION_LIMIT} दिए गए समय से ज्यादा का गाना चयन किया है , जो पूरा नही किया जा सकता। "
+                f"❌ ᴠɪᴅᴇᴏ {DURATION_LIMIT} ɴᴏ ʟᴏɴɢᴇʀ ᴛʜᴀɴ। "
             )
 
         file_name = get_file_name(audio)
@@ -152,8 +152,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="सूचनाए",
-                        url="https://t.me/shubhammusics")
+                        text="ᴜᴘᴅᴀᴛᴇꜱ",
+                        url="https://t.me/SUPERIOR_BOTS")
                    
                 ]
             ]
@@ -190,11 +190,11 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎬 यूट्यूब",
-                            url=f"{url}"),
+                            text="☑️ ꜱᴜᴘᴘᴏʀᴛ",
+                            url=f"https://t.me/OnlineHangama"),
                         InlineKeyboardButton(
-                            text="📥 डाउनलोड करे",
-                            url=f"{durl}")
+                            text="ᴜᴘᴅᴀᴛᴇꜱ 📢",
+                            url=f"https://t.me/SUPERIOR_BOTS")
 
                     ]
                 ]
@@ -208,25 +208,25 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="🎬 यूट्यूब",
-                                url=f"https://youtube.com")
+                                text="📢 ᴜᴘᴅᴀᴛᴇꜱ",
+                                url=f"https://t.me/SUPERIOR_BOTS")
 
                         ]
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ अपने {DURATION_LIMIT} दिए गए समय से ज्यादा का गाना चयन किया है , जो की पूरा नही किया जा सकता।")
+             await lel.edit(f"❌ ᴠɪᴅᴇᴏ {DURATION_LIMIT} ɴᴏ ʟᴏɴɢᴇʀ ᴛʜᴀɴ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ।")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🧐 ** अपने किसी भी तरह के गाने का नाम नही बताया?**")
-        await lel.edit("🔎 **गाने को खोजा जा रहा...**")
+            return await lel.edit("🧐 ** ᴋᴜᴄʜʜʜ ʟɪᴋʜ ʟᴇ ʙꜱᴅᴋ ᴛʏᴘᴇ ꜱᴏᴍᴇᴛʜɪɴɢ ᴛᴏ ᴘʟᴀʏ😪**")
+        await lel.edit("🔎 **ꜰɪɴᴅɪɴɢ...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🎵 **गाने को बजाने की तैयारी हो रही।...**")
+        await lel.edit("🎵 **ᴘʀᴏᴄᴇꜱꜱɪɴɢ।...**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -249,7 +249,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "❌ किर्पया गाने का नाम सही से बताए.\n\nअनयथा हम कुछ भी कर सकते ।"
+                "❌ ᴜɴᴀʙʟᴇ ᴛᴏ ꜰɪɴᴅ ᴜʀ ꜱᴏɴɢ.\n\n ᴘʟᴢ ᴛʀʏ ᴀɴᴏᴛʜᴇʀ ꜱᴏɴɢ ।"
             )
             print(str(e))
             return
@@ -258,18 +258,18 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text=" 🎬 यूट्यूब",
-                            url=f"{url}"),
+                            text=" ☑️ ꜱᴜᴘᴘᴏʀᴛ",
+                            url=f"https://t.me/OnlineHangama"),
                         InlineKeyboardButton(
-                            text="📥 डाउनलोड करे",
-                            url=f"{durl}")
+                            text="📢 ᴜᴘᴅᴀᴛᴇꜱ",
+                            url=f"https://t.me/SUPERIOR_BOTS")
 
                     ]
                 ]
             )
         
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ अपने {DURATION_LIMIT} दिए गए समय से ज्यादा का गाना चयन किया है , जो पूरा नही किया जा सकता।!")
+             await lel.edit(f"❌ ꜱᴏɴɢ {DURATION_LIMIT} ɴᴏ ʟᴏɴɢᴇʀ ᴛʜᴀɴ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
@@ -279,7 +279,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption="**🏷️गाने का नाम:- ** {}\n**🕒 समय:- ** {} min\n**👤 बजाने वाले का नाम:- ** {}\n\n**ℹ️ गाने का संख्या:- ** {} \n\n\n Join NOW @ShubhamMusics".format(
+        caption="**🏷️ɴᴀᴍᴇ:- ** {}\n**🕒 ᴅᴜʀᴀᴛɪᴏɴ:- ** {} min\n**👤 ᴢᴀɪᴅ ᴜꜱᴇʀ ʙʏ:- ** {}\n\n**ℹ️ ꜱᴏɴɢ ᴘʟᴀʏʟɪꜱᴛ:- ** {}  ".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -290,7 +290,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🏷️गाने का नाम:-  ** {}\n**🕒 समय:- ** {} min\n**👤 बजाने वाले का नाम:-  ** {}\n\n**📀 फिलहाल अभी इस ग्रुप में बज राजा है :-`{}`...** \n\n\n Join Now @ShubhamMusics".format(
+        caption="**🏷️ɴᴀᴍᴇ:-  ** {}\n**🕒 ᴅᴜʀᴀᴛɪᴏɴ:- ** {} min\n**👤 ᴢᴀɪᴅ ᴜꜱᴇʀ ʙʏ:-  ** {}\n\n**📀 ᴘʟᴀʏɪɴɢ ɴᴏᴡ :-`{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
