@@ -34,7 +34,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("ᴜᴘʟᴏᴀᴅ ʙʏ @zaid2_robot")
+        return await rkp.edit("ᴜᴘʟᴏᴀᴅ ʙʏ {BOT_USERNAME}")
     type = "audio"
     if type == "audio":
         opts = {
