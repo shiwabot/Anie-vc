@@ -259,7 +259,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text=" ☑️ ꜱᴜᴘᴘᴏʀᴛ",
-                            url=f"https://t.me/OnlineHangama"),
+                            url=f"https://t.me/SUPERIOR_SUPPORT"),
                         InlineKeyboardButton(
                             text="📢 ᴜᴘᴅᴀᴛᴇꜱ",
                             url=f"https://t.me/SUPERIOR_BOTS")
