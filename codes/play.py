@@ -143,7 +143,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/caeb50039026a746e7252.jpg"
+        thumb_name = "https://telegra.ph/file/b5f0915e87f5049a90efd.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -191,7 +191,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="☑️ ꜱᴜᴘᴘᴏʀᴛ",
-                            url=f"https://t.me/OnlineHangama"),
+                            url=f"https://t.me/SUPERIOR_SUPPORT"),
                         InlineKeyboardButton(
                             text="ᴜᴘᴅᴀᴛᴇꜱ 📢",
                             url=f"https://t.me/SUPERIOR_BOTS")
