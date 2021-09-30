@@ -24,9 +24,9 @@ from youtube_dl.utils import (
 async def song(client, message):
     cap = "@JEBotZ"
     url = message.text.split(None, 1)[1]
-    rkp = await message.reply("काम चल रहा है ...")
+    rkp = await message.reply("ꜰɪɴᴅɪɴɢ ...")
     if not url:
-        await rkp.edit("**कौनसा गाना आप चाहते है **\nUsage`/song <song name>`")
+        await rkp.edit("**ᴛʏᴘᴇ ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʜᴀᴛ ᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ **\nUsage`/song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -34,7 +34,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("ये गाना नही खोजा जा सका @shubhammusics")
+        return await rkp.edit("ᴜᴘʟᴏᴀᴅ ʙʏ @zaid2_robot")
     type = "audio"
     if type == "audio":
         opts = {
@@ -58,41 +58,41 @@ async def song(client, message):
         }
         song = True
     try:
-        await rkp.edit("कार्य किया जा रहा है ...")
+        await rkp.edit("ꜰɪɴᴅɪɴɢ ...")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
         await rkp.edit(f"`{str(DE)}`")
         return
     except ContentTooShortError:
-        await rkp.edit("`ये गाना बहुत ही कम समय का था`")
+        await rkp.edit("`ꜰɪɴᴅɪɴɢ ᴇʀʀᴏʀꜱ ꜱᴏᴍᴇᴛʜɪɴɢ`")
         return
     except GeoRestrictedError:
         await rkp.edit(
-            "`ये गाना आपके देश में नही मिल सकता @ShubhamMusics`"
+            "`ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ @Zaid2_Robot`"
         )
         return
     except MaxDownloadsReached:
-        await rkp.edit("`ये अधिक बार हो चुका`")
+        await rkp.edit("`ᴛᴏᴏ ᴍᴀɴʏ ʀᴇQᴜᴇꜱᴛꜱ`")
         return
     except PostProcessingError:
-        await rkp.edit("`कुछ गलत हुआ @ShubhamMusics`")
+        await rkp.edit("`something went wrong `")
         return
     except UnavailableVideoError:
-        await rkp.edit("`ये गाना के रूप में मौजूद नहीं है।`")
+        await rkp.edit("`ᴜɴᴀʙʟᴇ ᴛᴏ ꜰɪɴᴅ`")
         return
     except XAttrMetadataError as XAME:
         await rkp.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
         return
     except ExtractorError:
-        await rkp.edit("`कुछ गलत हुआ ।`")
+        await rkp.edit("`ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ।`")
         return
     except Exception as e:
         await rkp.edit(f"{str(type(e)): {str(e)}}")
         return
     time.time()
     if song:
-        await rkp.edit(" आपको दिया जा रहा है ।...") #ImJanindu
+        await rkp.edit("ᴅᴏɴᴇ...") #ImJanindu
         lol = "./etc/thumb.jpg"
         lel = await message.reply_audio(
                  f"{rip_data['id']}.mp3",
