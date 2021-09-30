@@ -6,8 +6,9 @@ load_dotenv()
 
 SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
-BOT_NAME = getenv("BOT_NAME", "Music v1.2")
+BOT_NAME = getenv("BOT_NAME", "Zaid")
 BOT_USERNAME = getenv("BOT_USERNAME")
+ZAID_ASSISTANT = getenv("ZAID_ASSISTANT", "Zaid")
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
