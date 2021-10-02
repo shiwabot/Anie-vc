@@ -129,7 +129,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>ᴘʟᴢ {user.first_name}, ᴍɪɴᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛ ɪꜱ ɴᴏᴛ ɪɴ ᴜʀ ᴘʟᴢ ᴀᴅᴅ ᴍᴀɴᴜᴀʟʟʏ @Zaid2_ASSISTANT ᴛʜᴇɴ ᴛʏᴘᴇ /play ᴛᴏ ᴄʜᴇᴄᴋ।</i>")
+            f"<i>ᴘʟᴢ {user.first_name}, ᴍɪɴᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛ ɪꜱ ɴᴏᴛ ɪɴ ᴜʀ ᴘʟᴢ ᴀᴅᴅ ᴍᴀɴᴜᴀʟʟʏ @Anievc ᴛʜᴇɴ ᴛʏᴘᴇ /play ᴛᴏ ᴄʜᴇᴄᴋ।</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
